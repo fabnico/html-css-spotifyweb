@@ -1,7 +1,11 @@
+html{
+   font-size: 13px;
+}
 *{
    padding: 0;
    margin: 0;
    box-sizing: border-box;
+
 }
 
 body{
@@ -12,17 +16,89 @@ body{
 .navbar{
    height: calc(100vh - 100px);
    width: 200px;
-   background-color: yellow;
+   background-color: black;
    float: left;
+   color: grey;
 }
 
 .n-top{
-   height: 80%;
-   background-color: pink;
+   height: 90%;
+   padding-left: 20px;
+   padding-top: 20px;
+}
+
+.n-top > img{
+   width: 150px;
+   margin-bottom: 30px;
+}
+.n-top > h4{
+   color:white;
+   margin-top: 20px;
+}
+
+.n-top .add{
+   width: 30px;
+   height: 30px;
+   background-color: grey;
+   text-align: center;
+   line-height: 30px;
+   display: inline-block;
+   margin-right: 5px;
+}
+
+.n-top i{
+ color: black;
+}
+
+.playlist{
+   margin: 10px 0;
+}
+
+.nav-utility img{
+   width: 25px;
+   margin-bottom: 10px;
+   vertical-align: middle;
+}
+
+.nav-utility a{
+   text-decoration: none;
+   color: grey;
+   font-weight: bold;
+   margin-left: 5px;
+}
+
+.navbar ul{
+   list-style-type: none;
+}
+
+.nav-utility.personal li{
+   margin-bottom: 15px;
 }
 
 .n-bottom{
-   height: 20%
+   height: 10%;
+   padding-left: 20px;
+}
+
+.n-bottom .install{
+   border-bottom: 1px solid grey;
+   margin-right: 20px;
+   padding-bottom: 10px;
+}
+
+.nav-utility.personal a{
+   margin-left: 0;
+}
+
+.n-bottom img{
+   width: 20px;
+   vertical-align: middle;
+}
+
+.profile{
+   margin-top: 10px;
+   color:white;
+   fon
 }
 
 .jumbotron{
@@ -32,7 +108,7 @@ body{
    float: left;
 }
 
-main:after{
+main::after{
    content: '';
    display: table;
    clear: both;
