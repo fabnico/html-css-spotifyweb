@@ -98,7 +98,6 @@ body{
 .profile{
    margin-top: 10px;
    color:white;
-   fon
 }
 
 .jumbotron{
@@ -116,10 +115,28 @@ main::after{
 
 .j-top{
   height: 100px;
-  width: 100%;
-  background-color: blue;
+  width: calc(100vw - 200px);
+  background-color: black;
   position: fixed;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
+
+.upgrade{
+  border: 2px solid #949598;
+  padding: 10px 30px;
+  border-radius: 15px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+
+
+
+
 
 .j-bottom{
   height: calc(100vh - 100px);
