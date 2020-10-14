@@ -262,13 +262,119 @@ main::after{
    border-radius: 50%;
 }
 
-
-
-
-  .music-utility{
+.music-utility{
    height: 100px;
    width: 100vw;
-   background-color: red;
+   padding: 10px;
+   background-color: #282828;
    position: fixed;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
 
+.onair{
+   display: flex;
+   align-items: center;
+}
+
+.onair img{
+   width: 40px;
+}
+
+.onair i{
+   margin-right: 10px;
+   color:grey;
+}
+
+.music-details{
+   margin-left: 10px;
+   margin-right: 30px;
+}
+
+.music-details div:first-child{
+   color: white;
+}
+.music-details div:last-child{
+   color: grey;
+}
+
+.control-container{
+   display: flex;
+   align-items: center;
+}
+
+.control-com{
+   text-align: center;
+}
+
+.control-com i:not(:last-child){
+   margin-right: 20px;
+}
+
+.control-com i{
+   font-size: 20px;
+   color: white;
+}
+
+.time-container{
+   margin-top: 20px;
+   position: relative;
+   display: inline-block;
+}
+
+.t1{
+   width: 300px;
+   height: 2px;
+   border: 2px solid #5A5A5A;
+   position: relative;
+}
+.t2{
+   width: 20%;
+   height: 2px;
+   border: 2px solid  #C1C1C1;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+.control span{
+   color: white;
+   font-size: 10px;
+}
+.control span:last-of-type{
+   margin-left: 20px;
+}
+
+.control span:first-of-type{
+   margin-right: 20px;
+}
+
+.misc{
+   display: flex;
+   align-items: center;
+}
+
+.time-container-xs{
+   position: relative;
+   display: inline-block;
+}
+
+.t1-xs{
+   width: 100px;
+   height: 2px;
+   border: 2px solid #5A5A5A;
+   position: relative;
+}
+.t2-xs{
+   width: 20%;
+   height: 2px;
+   border: 2px solid  #C1C1C1;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+.misc i{
+   margin-right: 20px;
+   color:white;
 }
