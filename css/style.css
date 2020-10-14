@@ -1,16 +1,17 @@
 html{
    font-size: 13px;
 }
+
 *{
    padding: 0;
    margin: 0;
    box-sizing: border-box;
-
 }
 
 body{
    width: 100vw;
    height: 100vh;
+   overflow: hidden;
 }
 
 .navbar{
@@ -25,6 +26,7 @@ body{
    height: 90%;
    padding-left: 20px;
    padding-top: 20px;
+   min-height: 400px;
 }
 
 .n-top > img{
@@ -78,6 +80,7 @@ body{
 .n-bottom{
    height: 10%;
    padding-left: 20px;
+   overflow: hidden;
 }
 
 .n-bottom .install{
@@ -160,6 +163,12 @@ main::after{
    margin-left: 5px;
 }
 
+.highlight{
+   border: 1px solid #ADFF2F;
+   width: 30px;
+   margin: 0 auto;
+}
+
 .j-bottom h1{
    font-size: 25px;
 }
@@ -188,22 +197,47 @@ main::after{
 
 .collection li{
    display: inline-block;
-   flex-basis: calc(100 / 6);
+   flex-basis: calc(100% / 6);
 }
 
 .collection li:not(:first-child){
    margin-left: 10px;
 }
 
-
-.collection .music-info {
+.music-info {
    text-align: center;
    margin-top: 10px;
 }
 
+/*Se in responsive le classi collection e suggestions mantengono lo stesso funzionamento ricordarsi di usarne solo una*/
 
+.suggestions{
+   list-style-type: none;
+   margin: 30px 0;
+   display: flex;
+}
 
+.suggestions img{
+   width: 100%;
+}
 
+.suggestions li{
+   display: inline-block;
+   flex-basis: calc(100% / 6);
+}
+
+.suggestions li:not(:first-child){
+   margin-left: 10px;
+}
+
+.j-bottom  h3{
+   margin-top: 5px;
+}
+/* end */
+
+.artists img{
+   border-radius: 50%;
+}
 
 
 
@@ -212,4 +246,6 @@ main::after{
    height: 100px;
    width: 100vw;
    background-color: red;
+   position: fixed;
+
 }
