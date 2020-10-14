@@ -104,8 +104,6 @@ body{
    margin-right: 5px;
 }
 
-
-
 .nav-utility.personal a{
    margin-left: 0;
 }
@@ -168,18 +166,20 @@ main::after{
   padding: 120px 20px 20px 20px;
 }
 
-.j-bottom .j-top-nav {
+.j-top-nav {
+   display: flex;
+   justify-content: center;
    list-style-type: none;
-   text-align: center;
+   flex-wrap: wrap;
    margin-bottom: 30px;
 }
 
-.j-bottom .j-top-nav li{
+.j-top-nav li{
    display: inline-block;
    margin-right: 15px;
 }
 
-.j-bottom .j-top-nav a{
+.j-top-nav a{
    text-decoration: none;
    color: grey;
    font-weight: bold;
@@ -206,6 +206,7 @@ main::after{
 
 .j-bottom h3{
    color: grey;
+   margin-bottom: 10px;
 }
 
 .collection{
@@ -220,11 +221,11 @@ main::after{
 
 .collection li{
    display: inline-block;
-   flex-basis: calc(100% / 6);
+   width: calc(100% / 6);
 }
 
-.collection li:not(:first-child){
-   margin-left: 10px;
+.collection li:not(:last-child){
+   margin-right: 10px;
 }
 
 .music-info {
@@ -246,7 +247,7 @@ main::after{
 
 .suggestions li{
    display: inline-block;
-   flex-basis: calc(100% / 6);
+   width: calc(100% / 6);
 }
 
 .suggestions li:not(:first-child){
@@ -276,6 +277,7 @@ main::after{
 .onair{
    display: flex;
    align-items: center;
+   width: 230px;
 }
 
 .onair img{
@@ -301,7 +303,13 @@ main::after{
 
 .control-container{
    display: flex;
+   justify-content: center;
    align-items: center;
+   width: 40%;
+}
+
+.control{
+   width: 100%;
 }
 
 .control-com{
@@ -321,10 +329,11 @@ main::after{
    margin-top: 20px;
    position: relative;
    display: inline-block;
+   width: calc(100% - 86px);
 }
 
 .t1{
-   width: 300px;
+   width: 100%;
    height: 2px;
    border: 2px solid #5A5A5A;
    position: relative;
@@ -352,6 +361,7 @@ main::after{
 .misc{
    display: flex;
    align-items: center;
+   width: 230px;
 }
 
 .time-container-xs{
@@ -377,4 +387,18 @@ main::after{
 .misc i{
    margin-right: 20px;
    color:white;
+}
+
+/*Media query*/
+
+@media screen and (min-width:992px) and (max-width: 1199px){
+
+   .collection{
+      flex-wrap: wrap;
+   }
+
+   .collection li{
+      flex-basis: calc(100% / 4 - 10px);
+   }
+
 }
