@@ -14,6 +14,7 @@ body{
    overflow: hidden;
 }
 
+
 .navbar{
    height: calc(100vh - 100px);
    width: 200px;
@@ -25,7 +26,12 @@ body{
 .n-top{
    height: 90%;
    padding-top: 20px;
-   min-height: 400px;
+   min-height: 450px;
+}
+
+
+.logo-xs{
+   display:none;
 }
 
 .n-top li{
@@ -88,10 +94,15 @@ body{
    margin-bottom: 15px;
 }
 
+.wrap{
+   overflow-y: auto;
+   height: 40%;
+}
+
 .n-bottom{
    height: 10%;
+   width: 100%;
    padding-left: 20px;
-   overflow: hidden;
 }
 
 .n-bottom .install{
@@ -160,7 +171,7 @@ main::after{
 
 .j-bottom{
   height: calc(100vh - 100px);
-  width: 100%;
+  width: calc(100vw - 200px);
   overflow: scroll;
   overflow-x: hidden;
   padding: 120px 20px 20px 20px;
@@ -304,6 +315,7 @@ main::after{
    justify-content: center;
    align-items: center;
    width: 40%;
+   min-width: 180px;
 }
 
 .control{
@@ -406,22 +418,18 @@ main::after{
 
 @media screen and (min-width:768px) and (max-width: 991px){
 
-   .j-top-nav li{
-      margin-bottom: 20px;
-      flex-basis: calc(100% / 3 - 20px);
-      text-align: center;
-   }
-
    .collection{
       flex-wrap: wrap;
    }
 
    .collection li{
       flex-basis: calc(100% / 2 - 10px);
+      max-width: 40%
    }
 
    .suggestions li{
       flex-basis: calc(100% / 2);
+      max-width: 40%;
    }
 
    .control span:last-of-type{
@@ -435,5 +443,89 @@ main::after{
    .time-container{
       width: calc(100% - 56px);
    }
+
+}
+
+@media screen and (max-width: 767px){
+
+ /*NAVBAR*/
+
+   .navbar{
+      width: 50px;
+      text-align: center;
+   }
+
+   .jumbotron{
+      width: calc(100vw - 50px);
+   }
+
+   .j-top{
+     width: calc(100vw - 50px);
+   }
+
+   .j-bottom{
+     width: calc(100vw - 50px);
+   }
+
+   .navbar a, .navbar h4,.navbar span{
+      display: none;
+   }
+
+   .n-bottom .install{
+      border-bottom: none;
+      margin: 0;
+   }
+
+   .n-top li{
+      padding-left: 0;
+      margin: 0;
+   }
+
+   .playlist{
+      display: none;
+   }
+
+   .n-bottom{
+      padding-left: 0;
+   }
+
+   .n-top{
+      padding-top: 5px;
+   }
+
+   .n-top .nav-utility:not(.personal) li:first-child{
+      border-left: none;
+   }
+
+   .n-top > img:first-of-type{
+      display: none;
+   }
+
+   .n-top img{
+      width: 25px;
+      padding-left: 0;
+      margin-bottom: 10px;
+   }
+
+ /*NAVBAR END */
+
+ .collection{
+    flex-wrap: wrap;
+}
+
+ .collection li{
+   flex-basis: calc(100% / 2 - 10px);
+   max-width: 40%;
+}
+
+.suggestions li{
+   flex-basis: calc(100% / 2);
+   max-width: 40%;
+}
+
+.music-details{
+   margin-left: 0;
+   margin-right: 0;
+}
 
 }
