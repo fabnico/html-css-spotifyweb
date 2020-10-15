@@ -14,7 +14,6 @@ body{
    overflow: hidden;
 }
 
-
 .navbar{
    height: calc(100vh - 100px);
    width: 200px;
@@ -72,11 +71,28 @@ body{
    margin: 10px 0;
    padding-left: 20px;
 }
+.playlist a{
+   text-decoration: none;
+   color: grey;
+}
+
 
 .nav-utility img{
    width: 25px;
    margin-bottom: 10px;
    vertical-align: middle;
+   opacity: 0.5;
+}
+
+.nav-utility li:hover img, .n-bottom .install:hover img{
+   opacity: 1
+}
+
+.navbar li:hover a, .playlist:hover a, .install:hover a{
+   color:white;
+}
+.playlist:hover .add{
+   background-color: white;
 }
 
 .nav-utility a{
@@ -105,6 +121,11 @@ body{
    padding-left: 20px;
 }
 
+.n-bottom a{
+   text-decoration: none;
+   color: grey;
+}
+
 .n-bottom .install{
    border-bottom: 1px solid grey;
    margin-right: 20px;
@@ -113,6 +134,7 @@ body{
 .n-bottom .install img{
    width: 15px;
    margin-right: 5px;
+   opacity: 0.5;
 }
 
 .nav-utility.personal a{
@@ -126,8 +148,13 @@ body{
 
 .profile{
    margin-top: 10px;
+   color: white;
+}
+
+.profile a{
    color:white;
 }
+
 
 .profile img{
    background-color: grey;
@@ -169,6 +196,10 @@ main::after{
   display: inline-block;
 }
 
+.upgrade:hover{
+   padding: 12px 32px;
+}
+
 .j-bottom{
   height: calc(100vh - 100px);
   width: calc(100vw - 200px);
@@ -196,6 +227,11 @@ main::after{
    font-weight: bold;
    margin-left: 5px;
 }
+
+.j-top-nav a:hover{
+   color: white;
+}
+
 
 .highlight{
    border: 1px solid #ADFF2F;
@@ -303,11 +339,25 @@ main::after{
    margin-right: 30px;
 }
 
-.music-details div:first-child{
+.music-details div:first-child a{
    color: white;
+   text-decoration: none;
 }
-.music-details div:last-child{
+.music-details div:last-child a{
    color: grey;
+   text-decoration: none;
+}
+
+.music-details div:first-child a:hover{
+   text-decoration: underline;
+}
+
+.music-details div:last-child a:hover{
+   text-decoration: underline;
+}
+
+.onair i:hover{
+   color: white;
 }
 
 .control-container{
@@ -326,13 +376,17 @@ main::after{
    text-align: center;
 }
 
-.control-com i:not(:last-child){
+.control-com a:not(:last-child){
    margin-right: 20px;
 }
 
-.control-com i{
+.control-com a i{
    font-size: 20px;
    color: white;
+}
+
+.control-com a i.fa.fa-play-circle:hover{
+   font-size: 25px;
 }
 
 .time-container{
@@ -356,6 +410,27 @@ main::after{
    top: 0;
    left: 0;
 }
+
+.dot{
+   width: 15px;
+   height: 15px;
+   background-color: white;
+   border-radius: 50%;
+   position: absolute;
+   top: 50%;
+   left: 20%;
+   transform: translate(-20%,-50%);
+   display: none;
+}
+
+.time-container:hover .t2{
+   border-color: #ADFF2F;
+}
+
+.time-container:hover .dot{
+   display: block;
+}
+
 .control span{
    color: white;
    font-size: 10px;
@@ -392,6 +467,26 @@ main::after{
    position: absolute;
    top: 0;
    left: 0;
+}
+
+.dot-xs{
+   width: 15px;
+   height: 15px;
+   background-color: white;
+   border-radius: 50%;
+   position: absolute;
+   top: 50%;
+   left: 20%;
+   transform: translate(-20%,-50%);
+   display: none;
+}
+
+.time-container-xs:hover .dot-xs{
+   display: block;
+}
+
+.time-container-xs:hover .t2-xs{
+   border-color: #ADFF2F;
 }
 
 .misc i{
